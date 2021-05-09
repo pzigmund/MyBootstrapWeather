@@ -11,42 +11,67 @@
 </head>
 
 <body>
-    <div class="container text-center">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Dnes</th>
+                    <th scope="col">Zitra</th>
+                    <th scope="col">Pozitri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Teplota</th>
+                    <td><p id="prvni_1"></p></td>
+                    <td><p id="druhy_1"></p></td>
+                    <td><p id="treti_1"></p></td>
+                </tr>
+                <tr>
+                    <th scope="row">Popis</th>
+                    <td><p id="prvni_2"></p></td>
+                    <td><p id="druhy_2"></p></td>
+                    <td><p id="treti_2"></p></td>
+                </tr>
+                <tr>
+                    <th scope="row">Datum</th>
+                    <td><p id="prvni_3"></p></td>
+                    <td><p id="druhy_3"></p></td>
+                    <td><p id="treti_3"></p></td>
+                </tr>
+            </tbody>
+        </table>
+
 
         <div class="row">
             <div class="col">
-                zítra
+                <input id="input" type="text" class="form-control"
+                    placeholder="Zadejete adresu nebo kliknete na Lokalizovat" aria-label="Input phrase"
+                    aria-describedby="basic-addon1">
             </div>
-            <div class="col">
-                den poté
-            </div>
-            <div class="col">
-                dva dny poté
-            </div>
-            
+
         </div>
         <div class="row">
-            <div class="col align-self-center">
-                dnes
+            <div class="col">
+                <button id="get_weather" type="button" class="btn btn-light">Zjistit</button>
             </div>
         </div>
-        <div class="input-group">
-            <div class="row">
-                <div class="col">
-                    <input id="input" type="text" class="form-control" placeholder="Text for translation..." aria-label="Input phrase"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="col">
-                    <button id="locate" type="button" class="btn btn-primary">Lokalizovat</button>
-                </div>
+        <div class="row">
+            <div class="col">
+                <button id="locate" type="button" class="btn btn-light">Lokalizovat</button>
             </div>
-            <div class="row">
-                <div class="col">
-                    <button id="get_weather" type="button" class="btn btn-primary">Zjistit</button>
-                </div>
-            </div>
-           
         </div>
+        <div class="row">
+            <div class="col">
+                <h3>History: </h3>
+            </div>
+            <div class="col">
+                <p id="history"></p>
+            </div>
+
+        </div>
+
 
 
 
